@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="hello">
+    <TaskOne></TaskOne>
+  </div>
+  <hr>
+  <div class="animal">
+    <GreetingTask></GreetingTask>
+  </div>
+  <hr>
+  <div class="random-animal">
+    <RandomBreed></RandomBreed>
+  </div>
+  <hr>
+  <div class="add-animal-type">
+    <h1>Список пород</h1>
+    <ListOfBreeds></ListOfBreeds>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import GreetingTask from "@/components/LabTasks";
+import TaskOne from "@/components/TaskOne";
+import RandomBreed from "@/components/RandomBreed";
+import ListOfBreeds from "@/components/ListOfBreeds";
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {RandomBreed, TaskOne, GreetingTask,ListOfBreeds},
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  .animal{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  img{
+    width: 250px;
+    height: 250px;
+    padding-left: 35px;
+  }
 </style>
