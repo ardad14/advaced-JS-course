@@ -1,13 +1,13 @@
 <template>
   <div class="random">
-    <h4 :hidden=!this.visibility>Порода: {{ name }}</h4>
+    <h4 :hidden=!this.visibility><strong>Порода:</strong> {{ name }}</h4>
     <ul v-if="this.subBreed.length > 0">
       <li v-for="breed in this.subBreed"
           :key="breed.id">
         {{ breed }}
       </li>
     </ul>
-    <img :src=image alt="">
+    <img :src=image alt=""  :hidden=!this.visibility>
     <button
         @click=this.getRandomBreed
     >
@@ -59,8 +59,10 @@ export default {
 
 <style scoped>
 button {
-  height: 50px;
+  height: 45px;
   width: 100px;
+  margin-top: -180px;
+
 }
 
 li {
@@ -68,14 +70,33 @@ li {
   font-weight: 700;
   font-style: italic;
 }
-.random{
+
+.random {
   display: flex;
 }
-.random button{
-  margin-left: 20px;
+
+img {
   width: 300px;
+}
+
+.random button {
+  margin-left: 20px;
+  width: 200px;
   border-radius: 20px;
   position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   bottom: -180px;
 }
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+}
+
+h4 strong {
+  font-family: 'Montserrat', sans-serif;
+  color: red;
+}
+
 </style>

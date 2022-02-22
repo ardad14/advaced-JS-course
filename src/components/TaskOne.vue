@@ -1,9 +1,8 @@
 <template>
   <!-- Task1, 2  -->
   <div class="task1">
-    <h1 class="h1">Приветственное поле</h1>
     <div class="hello_task">
-      <h5>Привет, {{ userName }}</h5>
+      <h5>Привет, <strong>{{ userName }}</strong></h5>
       <input v-model="inputText" type="text">
     </div>
     <!-- Task3  -->
@@ -36,8 +35,13 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 
+h5 strong {
+  color: red;
+}
+
 .task1 h5 {
   font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
   margin-left: -150px;
 }
 
@@ -50,14 +54,20 @@ export default {
   border-radius: 30px;
   margin-left: 70px;
   padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .hello_task {
   display: flex;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .task1 h2 {
+  font-family: 'Montserrat', sans-serif;
   margin-left: 80px;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 500;
 }
 </style>

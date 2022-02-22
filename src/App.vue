@@ -2,7 +2,6 @@
   <div class="hello">
     <TaskOne></TaskOne>
   </div>
-  <hr>
   <div class="animal">
     <GreetingTask></GreetingTask>
   </div>
@@ -35,10 +34,20 @@ export default {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
   }
   img{
-    width: 250px;
+    width: 30px;
     height: 250px;
-    padding-left: 35px;
+    padding-left: 50px;
   }
+  hr{
+    margin-top: 50px;
+  }
+  .add-animal-type h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-left: 600px;
+  }
+
 </style>

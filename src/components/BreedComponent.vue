@@ -1,13 +1,13 @@
 <template class="block_row">
   <div class="block_row">
     <div class="elements">
-      <h4>Порода: {{ name }}</h4>
+      <h4> Порода: <strong> {{ name }}</strong> </h4>
       <img :src=this.image alt="">
       <ul v-if="subbreeds.length > 0">
-          <li v-for="breed in subbreeds"
-              :key="breed.id">
-            {{ breed }}
-          </li>
+        <li v-for="breed in subbreeds"
+            :key="breed.id">
+          {{ breed }}
+        </li>
       </ul>
     </div>
   </div>
@@ -49,9 +49,18 @@ export default {
 
 li {
   color: red;
-  font-weight: 700;
-  font-style: italic;
-  display: flex;
+  display: block;
+  float: left;
+  width: 80px;
+  margin-left: 20px;
+  margin-bottom: 2px;
+}
+
+ul {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+
 }
 
 img {
@@ -61,19 +70,23 @@ img {
 
 h4 {
   margin-left: 70px;
+  font-style: italic;
+}
+h4 strong{
+  font-style: italic;
+  color: red;
 }
 
 .elements {
   border: 2px solid red;
-  width: 300px;
+  width: 330px;
   border-radius: 20px;
-  height: 750px;
-  background-color: #f5efef;
+  height: 450px;
+  background-color: #f3eeee;
 }
 
 .block_row {
   margin-bottom: 20px;
-  margin-left: 60px;
+  margin-left: 35px;
 }
-
 </style>
