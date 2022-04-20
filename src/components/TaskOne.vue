@@ -1,11 +1,9 @@
 <template>
-  <!-- Task1, 2  -->
   <div class="task1">
     <div class="hello_task">
       <h5>Привет, <strong>{{ userName }}</strong></h5>
       <input v-model="inputText" type="text">
     </div>
-    <!-- Task3  -->
     <h2>Породы собак</h2></div>
 </template>
 

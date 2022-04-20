@@ -22,7 +22,6 @@
       Перемешать список
     </button>
   </div>
-
 </template>
 
 <script>
@@ -74,13 +73,15 @@ button {
   margin-left: 20px;
   margin-bottom: 30px;
 }
-ul{
+
+ul {
   margin-left: 650px;
   font-family: 'Montserrat', sans-serif;
   color: red;
   font-size: 22px;
 }
-li{
+
+li {
   padding-bottom: 10px;
 }
 </style>
